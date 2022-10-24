@@ -12,6 +12,36 @@ body {
   font-weight: 400;
   color: #555;
 }
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid--center-v {
+  align-items: center;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
 .main-nav-list {
   list-style: none;
   display: flex;
@@ -72,16 +102,32 @@ body {
   max-height: 46.5rem;
   object-fit: cover;
 }
+
 .heading-secondary {
   font-size: 1.8rem;
   line-height: 1.2;
   font-weight: 400;
 }
+
 .heading-primary {
   font-size: 3.7rem;
   line-height: 1.05;
   font-weight: 700;
   margin-bottom: 1.5rem;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
 }
 .btn {
   display: inline-block;
@@ -122,4 +168,189 @@ body {
   font-weight: 500;
   text-align: center;
   margin-bottom: 4rem;
+}
+
+.section-how {
+  padding: 9.6rem 0;
+}
+.step-number {
+  font-size: 9rem;
+  font-weight: 800;
+  color: rgba(124, 90, 66, 37%);
+  margin-bottom: 1.2rem;
+}
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+.step-img-box {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-img-box::before,
+.step-img-box::after {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+  border-radius: 50% / 70% 50% 50% 30%;
+  background-color: rgba(174, 186, 177, 0.5);
+  width: 45%;
+  padding-bottom: 45%;
+  z-index: -1;
+}
+.step-img-box::after {
+  border-radius: 50% / 30% 50% 50% 70%;
+  background-color: rgba(215, 221, 217, 0.5);
+  width: 60%;
+  padding-bottom: 60%;
+  z-index: -2;
+}
+
+.step-img {
+  width: 35%;
+}
+
+.section-candles {
+  padding: 9.6rem 25rem;
+}
+.candle {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.candle:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+.candle-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8em;
+}
+.candle-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+.tag {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px;
+  font-weight: 700;
+}
+.tag--sleep {
+  background-color: #add8e6;
+}
+.tag--citrus {
+  background-color: #f1d169;
+}
+.tag--berries {
+  background-color: #e17f90;
+}
+.candle-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.candle-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.candle-attribute {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  gap: 1.6rem;
+}
+.candle-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #555;
+}
+.candle-img {
+  width: 100%;
+}
+.all-candles {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.section-testimonials {
+  background-color: #d9d9d9;
+  display: grid;
+  grid-template-columns: 2fr;
+  align-items: center;
+}
+.testimonials-container {
+  padding: 5rem 12rem 5rem;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+.testimonial-img {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 7.7rem;
+  gap: 1rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+.gallery-item {
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+.gallery-container {
+  display: grid;
+  grid-gap: 1.1rem;
+  justify-content: center;
+  align-content: space-between;
+}
+.gallery-container img {
+  object-fit: cover;
+  width: 20rem;
+  height: 17rem;
+}
+
+.gallery-out-container img {
+  object-fit: cover;
 }
