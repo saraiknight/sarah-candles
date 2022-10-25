@@ -68,6 +68,7 @@ body {
   height: 9.6rem;
   padding: 4.8rem;
 }
+
 .main-nav-list {
   list-style: none;
   display: flex;
@@ -119,6 +120,11 @@ body {
   line-height: 1.05;
   font-weight: 700;
   margin-bottom: 1.5rem;
+}
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
 }
 .heading-tertiary {
   font-size: 3rem;
@@ -454,3 +460,74 @@ body {
   text-align: center;
 }
 
+.section-cta {
+  padding: 4.8rem 0 12.8rem 0;
+}
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #d9d9d9;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  overflow: hidden;
+}
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #333;
+}
+.cta .heading-secondary {
+  color: #333;
+  margin-bottom: 3rem;
+}
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+.cta-img-box {
+  background-size: cover;
+  background-position: center;
+  background-image: url(imgs/cta-img.jpg);
+}
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: none;
+  color: inherit;
+  border: #000 solid 1px;
+  background-color: #d9d9d9;
+  border-radius: 9px;
+}
+
+.btn--form {
+  border-radius: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+.cta *:focus {
+  outline: none;
+}
